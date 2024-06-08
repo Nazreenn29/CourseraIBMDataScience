@@ -1,1 +1,35 @@
+IBM Capstone Project
+
+Welcome to my data analytics capstone project with IBM!
+
+In this project, I assume the role of a Data Analyst for a prominent international IT and business consulting firm, renowned for its expertise in IT solutions and a team of highly skilled IT professionals. The company consistently analyzes data to anticipate future skill requirements, ensuring it remains competitive and abreast of rapidly evolving technologies. As part of this initiative, I will support the program by gathering and analyzing data from various sources to identify trends for this year's report on emerging skills.
+
+Project Workflow
+
+Week 1: Data Collection
+My initial task is to compile a list of the most in-demand programming skills from various sources such as job advertisements, training websites, and surveys. I will begin by scraping data from online sources and utilizing APIs to gather data in multiple formats, including CSV files, Excel sheets, and databases.
+
+Week 2: Data Wrangling
+In the second week, I will employ data wrangling techniques to prepare the collected data for analysis. This process involves cleaning, transforming, and organizing the data to ensure it is in a suitable format for subsequent analysis.
+
+Week 3: Exploratory Data Analysis (EDA)
+Once sufficient data has been retrieved and cleaned, I will apply statistical methods to analyze the data. This exploratory data analysis will help uncover underlying patterns, correlations, and insights.
+
+Week 4: Data Visualization
+In the fourth week, I will create charts and graphs to visually represent the data. This step is crucial for making the data comprehensible and highlighting significant trends and insights.
+
+Week 5: Building a Dashboard
+Using IBM Cognos Analytics, I will develop a comprehensive dashboard that integrates all the data and reveals trends and insights. The dashboard may include analyses on topics such as the most in-demand programming languages, the most sought-after database skills, and the most popular Integrated Development Environments (IDEs).
+
+Week 6: Presentation of Findings
+In the final week, I will present my findings using storytelling techniques to effectively communicate the insights. This presentation will showcase the trends and skills identified through the data analysis, providing valuable information for the company's strategic planning.
+
+Throughout this project, each stage of the data analysis process is meticulously documented in Jupyter notebooks, ensuring a clear and organized workflow.
+
+
+
+
+
+
+
 

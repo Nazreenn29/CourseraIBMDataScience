@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Stroke Prediction{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url("{{ url_for('static', filename='image.webp') }}");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 0;
+                height: 100vh;
+                overflow: hidden;
+                color: #fff;
+            }
+        
+            .navbar {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        
+            .navbar-nav .nav-link {
+                color: #fff;
+            }
+        
+            .navbar-nav .nav-link:hover {
+                color: #ddd;
+            }
+        
+            .container {
+                margin-top: 80px;
+                text-align: left; /* Align text to the left */
+            }
+        
+            .footer {
+                text-align: center;
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+        
+            .bold-text {
+                font-weight: bold;
+                font-size: 32px; /* Increase text size */
+                color: #fff;
+                text-align: left; /* Align text to the left */
+            }
+        
+            .btn-red {
+                background-color: #ff0000;
+                border-color: #ff0000;
+                color: #fff;
+                margin-top: 20px; /* Add some margin to the top of the button */
+            }
+        
+            .btn-red:hover {
+                background-color: #cc0000;
+                border-color: #cc0000;
+            }
+        </style>
+        
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Stroke Prediction</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('predict_page') }}">Predict</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('bmi_page') }}">BMI Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('counsel_page') }}">Counsel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact_page') }}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Stroke Prediction
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="bold-text">
+    <h1 style="font-size: 60px;">Brain Stroke Prediction</h1> <!-- Further increase heading size if needed -->
+    <p style="font-size: 30px;">Know if you are prone to Stroke or not.</p> <!-- Adjust paragraph text size -->
+    <p style="font-size: 30px;">Is your life stressful? Do you feel anxious for no reason? Take this quiz, figure out what is going on, and take control of your life ❤️.</p> <!-- Adjust paragraph text size -->
+    <a href="{{ url_for('predict_page') }}" class="btn btn-red btn-lg">Get Started</a>
+</div>
+{% endblock %}

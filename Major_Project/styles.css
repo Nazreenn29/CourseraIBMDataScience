@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.jumbotron {
+    background: linear-gradient(315deg, #B993D6 19%, #8CA6DB 85%);
+    color: white;
+}
+
+.navbar-dark .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: #d4d4d4;
+}
+
+.btn-primary {
+    background-color: #073b4c !important;
+    border-color: #023047 !important;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}

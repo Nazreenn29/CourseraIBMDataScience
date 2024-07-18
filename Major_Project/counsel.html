@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Counsel{% endblock %}
+
+{% block content %}
+<section id="title">
+    <div class="container-fluid">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{{url_for('home')}}">Stroke Prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('predict_page')}}">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('bmi_page')}}">BMI Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('counsel_page')}}">Counsel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('contact_page')}}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Scrollable Content -->
+        <div class="scrollable-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Column 1 -->
+                    <div class="topic">
+                        <h2>Psychological Care After Stroke</h2>
+                        <p>When stroke patients do not receive adequate support for mental health, it can hinder recovery and reduce motivation to pursue rehabilitation.</p>
+                        <p>By treating stroke patients holistically – by taking into account mental and social factors, rather than just the physical symptoms of stroke – a better outcome can be achieved.</p>
+                        <p>You’re about to learn why psychological care is important for stroke patients and how you can approach it.</p>
+                    </div>
+
+                    <br><br>
+
+                    <div class="topic">
+                        <h2>The Virtuous Cycle of Psychological Care</h2>
+                        <p>When stroke patients can receive psychological care during the early stages of recovery, it can help improve levels of confidence, motivation, and wellbeing.</p>
+                        <p>The benefits of psychological care create a virtuous cycle for the stroke patient. Unlike a vicious cycle, where negative events reinforce themselves, a virtuous cycle occurs when positive events reinforce themselves.</p>
+                        <p>More psychological care results in more positive mood and confidence. Positive mood and confidence motivate more action towards recovery, which results in more physical improvements.</p>
+                    </div>
+
+                    <br><br>
+
+                    <div class="topic">
+                        <h2>Improving Psychological Care After Stroke</h2>
+                        <p>The aftermath of a stroke can take a devastating toll on patients’ psychological health.</p>
+                        <p>To negate the effects of post-stroke depression and other psychological disorders, better psychological care is needed.</p>
+                        <p>Experiment with different modalities like talk therapy or positive psychology to help improve your confidence and mood.</p>
+                        <p>This can result in a virtuous cycle where your recovery continues to improve.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Column 2 -->
+                    <div class="topic">
+                        <h2>The Need for Psychological Care After Stroke</h2>
+                        <p>A stroke is a life-threatening condition that often leaves significant aftermath, including impaired mobility, impaired speech and/or cognition, difficulty eating, and inability to use the bathroom independently.</p>
+                        <p>Between 35%-60% of stroke patients experience cognitive impairments as well.</p>
+                        <p>More than a third of stroke survivors struggle with post-stroke depression, the most common psychiatric disorder after stroke.</p>
+                        <p>With the majority of stroke patients struggling with new cognitive, physical, and emotional distress, psychological care should be prioritized.</p>
+                    </div>
+
+                    <br><br>
+
+                    <div class="topic">
+                        <h2>Types of Psychological Care After Stroke</h2>
+                        <p>If you would like to seek psychological care for yourself or a loved one, talk to your doctor or medical team. Your doctor may refer you to a psychiatrist or other health specialist.</p>
+                        <p>Methods for psychological care after stroke include psychotherapy, positive psychology, mindfulness, and cognitive behavior therapy (CBT).</p>
+                        <p>These modalities can help with a variety of psychiatric disorders including post-stroke depression and can improve psychological wellbeing.</p>
+                        <p>Experiment with different types of psychological treatments until you find one that’s right for you.</p>
+                    </div>
+
+                    <br><br>
+
+                    <div class="topic">
+                        <h2>Seeking Psychological Care</h2>
+                        <p>If you’re interested in a holistic approach to recovery, consider the various types of psychological care available.</p>
+                        <p>Discuss these options with your medical team to find the best approach for your individual needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .scrollable-content {
+        max-height: 80vh; /* Adjust as needed */
+        overflow-y: auto;
+    }
+
+    .topic {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+
+{% endblock %}

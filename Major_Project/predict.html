@@ -1,0 +1,84 @@
+
+{% extends "base.html" %}
+
+{% block title %}Predict Stroke{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Stroke Prediction Form</h2>
+    <form action="{{ url_for('predict') }}" method="post">
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-select" id="gender" name="gender">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="hypertension">Hypertension</label>
+            <select class="form-select" id="hypertension" name="hypertension">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="heart_disease">Heart Disease</label>
+            <select class="form-select" id="heart_disease" name="heart_disease">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ever_married">Ever Married</label>
+            <select class="form-select" id="ever_married" name="ever_married">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="work_type">Work Type</label>
+            <select class="form-select" id="work_type" name="work_type">
+                <option value="3">Self-employed</option>
+                <option value="2">Private</option>
+                <option value="4">Children</option>
+                <option value="0">Government Job</option>
+                <option value="1">Never Worked</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="residence_type">Residence Type</label>
+            <select class="form-select" id="residence_type" name="residence_type">
+                <option value="1">Urban</option>
+                <option value="0">Rural</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="avg_glucose_level">Average Glucose Level</label>
+            <input type="number" step="any" class="form-control" id="avg_glucose_level" name="avg_glucose_level" required>
+        </div>
+        <div class="form-group">
+            <label for="bmi">BMI</label>
+            <input type="number" step="any" class="form-control" id="bmi" name="bmi" required>
+        </div>
+        <div class="form-group">
+            <label for="smoking_status">Smoking Status</label>
+            <select class="form-select" id="smoking_status" name="smoking_status">
+                <option value="0">Unknown</option>
+                <option value="2">Never Smoked</option>
+                <option value="1">Formerly Smoked</option>
+                <option value="3">Smokes</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Predict</button>
+    </form>
+    {% if prediction_text %}
+    <div class="prediction-container">
+        <p class="prediction-text">{{ prediction_text }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

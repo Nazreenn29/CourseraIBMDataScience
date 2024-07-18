@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Stroke Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='image.webp') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header, .footer {
+            background-color: #073b4c;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header {
+            top: 0;
+            left: 0;
+        }
+
+        .footer {
+            bottom: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header a, .footer a {
+            color: #fff;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .header a:hover, .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .welcome-message h1 {
+            font-weight: bold;
+            color: #073b4c;
+        }
+
+        .welcome-message p {
+            font-size: 18px;
+            color: #073b4c;
+            margin: 20px 0;
+        }
+
+        .btn-get-started {
+            background-color: #073b4c;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-get-started:hover {
+            background-color: #023047;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('index') }}">Predict</a>
+        <a href="{{ url_for('bmi') }}">BMI Calculator</a>
+        <a href="{{ url_for('counsel') }}">Counsel</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Brain Stroke Prediction</h1>
+            <p>Know if you are prone to Stroke or not.</p>
+            <p>Is your life stressful? Do you feel anxious for no reason? Take this quiz, figure out what is going on and take control of your life ❤️</p>
+            <a href="{{ url_for('index') }}" class="btn btn-get-started">Get Started</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('index') }}">Predict</a>
+        <a href="{{ url_for('bmi') }}">BMI Calculator</a>
+        <a href="{{ url_for('counsel') }}">Counsel</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+</body>
+
+</html>

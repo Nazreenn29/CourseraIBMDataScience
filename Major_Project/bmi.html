@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}BMI Calculator{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">BMI Calculator</h1>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <img src="{{ url_for('static', filename='BMI-C.webp') }}" class="img-fluid" alt="bmi image">
+        </div>
+        <div class="col-lg-6">
+            <div class="display mb-4">
+                <p id="result">20.0</p>
+                <p id="category">Normal weight</p>
+            </div>
+            <div class="mb-4">
+                <label for="weight">Weight</label>
+                <input type="range" min="20" max="200" value="20" id="weight" class="form-range" oninput="calculate()">
+                <span id="weight-val">20 kg</span>
+            </div>
+            <div>
+                <label for="height">Height</label>
+                <input type="range" min="100" max="250" value="100" id="height" class="form-range" oninput="calculate()">
+                <span id="height-val">100 cm</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='bmijs.js') }}" charset="utf-8"></script>
+{% endblock %}
